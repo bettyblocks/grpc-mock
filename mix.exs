@@ -1,7 +1,7 @@
 defmodule GrpcMock.Mixfile do
   use Mix.Project
 
-  @version "0.3.1"
+  @version "1.0.0"
 
   def project do
     [
@@ -52,8 +52,10 @@ defmodule GrpcMock.Mixfile do
   defp deps do
     [
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
-      {:grpc, "~> 0.8", organization: "betty_blocks_bv"},
-      {:ex_doc, "~> 0.37.0", only: :dev}
+      {:grpc, "~> 1.0.0"},
+      {:grpc_server, "~> 1.0.0"},
+      {:gun, "~> 2.0"},
+      {:ex_doc, "~> 0.40", only: :dev}
     ]
   end
 end
